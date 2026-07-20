@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaYoutube, FaTelegram } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 
 export default function ContactSection() {
@@ -148,7 +148,7 @@ export default function ContactSection() {
 
                             {/* gmail */}
                             <a
-                                href="mailto:mukilans25361@gmail.com"
+                                href="mailto:mukilan.s.2024.aiml@rajalakshmi.edu.in"
                                 className="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl
                 border border-white/10
                 bg-white/[0.04]
@@ -581,42 +581,42 @@ export default function ContactSection() {
                             <FaGithub className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-white" />
                         </a>
 
-                        {/* YouTube */}
+                        {/* Instagram */}
                         <a
-                            href="https://www.youtube.com/@WebKaizenDev"
+                            href="https://www.instagram.com/mukilan_s18/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="YouTube"
+                            aria-label="Instagram"
                             className="group relative grid h-14 w-14 place-items-center overflow-hidden rounded-[20px]
         border border-white/10 bg-white/[0.05] backdrop-blur-2xl
         shadow-[0_10px_30px_rgba(0,0,0,0.28)]
         transition-all duration-500 ease-out
-        hover:-translate-y-1.5 hover:scale-105 hover:border-red-400/50"
+        hover:-translate-y-1.5 hover:scale-105 hover:border-pink-400/50"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-500/18 via-rose-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/18 via-rose-400/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
-                            <div className="absolute -inset-6 bg-red-500/0 blur-2xl transition-all duration-500 group-hover:bg-red-500/20" />
+                            <div className="absolute -inset-6 bg-pink-500/0 blur-2xl transition-all duration-500 group-hover:bg-pink-500/20" />
 
-                            <FaYoutube className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-red-400" />
+                            <FaInstagram className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-pink-400" />
                         </a>
 
-                        {/* Telegram */}
+                        {/* WhatsApp */}
                         <a
-                            href="https://t.me/web_kaizen_official"
+                            href="https://wa.me/919360737403"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Telegram"
+                            aria-label="WhatsApp"
                             className="group relative grid h-14 w-14 place-items-center overflow-hidden rounded-[20px]
         border border-white/10 bg-white/[0.05] backdrop-blur-2xl
         shadow-[0_10px_30px_rgba(0,0,0,0.28)]
         transition-all duration-500 ease-out
-        hover:-translate-y-1.5 hover:scale-105 hover:border-sky-400/50"
+        hover:-translate-y-1.5 hover:scale-105 hover:border-green-400/50"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/18 via-cyan-400/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-green-500/18 via-emerald-400/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
-                            <div className="absolute -inset-6 bg-sky-500/0 blur-2xl transition-all duration-500 group-hover:bg-sky-500/20" />
+                            <div className="absolute -inset-6 bg-green-500/0 blur-2xl transition-all duration-500 group-hover:bg-green-500/20" />
 
-                            <FaTelegram className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-sky-400" />
+                            <FaWhatsapp className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-green-400" />
                         </a>
                     </div>
 

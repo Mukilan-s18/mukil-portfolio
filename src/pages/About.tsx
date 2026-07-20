@@ -454,7 +454,7 @@ export default function About() {
         <div class="resume-wrapper">
             <!-- Header -->
             <div class="header">
-                <img src="/assets/prince.png" alt="Mukilan S" class="profile-photo" style="object-position: center; border-radius: 50%; width: 120px; height: 120px;">
+                <img src="/assets/mukilan.jpg" alt="Mukilan S" class="profile-photo" style="object-position: top center; object-fit: cover; border-radius: 50%; width: 120px; height: 120px;">
                 <div class="header-content">
                     <h1>Mukilan S</h1>
                     <p class="title">AI/ML Specialist & Full-Stack Developer</p>
