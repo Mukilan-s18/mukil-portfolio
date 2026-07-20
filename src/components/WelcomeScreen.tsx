@@ -166,7 +166,7 @@ export default function WelcomeScreen() {
             }}
             className="inline-block overflow-hidden whitespace-nowrap"
           >
-            www.webkaizen.in
+            www.mukilan.in
           </motion.span>
 
           <motion.span
