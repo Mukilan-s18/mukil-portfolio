@@ -37,7 +37,7 @@ extend({
 });
 
 const GLTF_PATH = "/assets/cards.glb";
-const TEXTURE_PATH = "/assets/new.jpeg";
+const TEXTURE_PATH = "/assets/id-card.jpeg";
 
 useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);
@@ -473,6 +473,7 @@ function Band({
               >
                 <meshPhysicalMaterial
                   {...materials.base}
+                  map={texture}
                   roughness={0.35}
                   metalness={0.1}
                   clearcoat={1}
@@ -510,12 +511,9 @@ function Band({
         <meshLineMaterial
           transparent
           opacity={0.9}
-          color="white"
+          color="#222"
           depthTest={false}
           resolution={[width, height]}
-          useMap
-          map={texture}
-          repeat={[-4, 1]}
           lineWidth={1}
         />
       </mesh>

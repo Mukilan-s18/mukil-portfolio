@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import favicon from "/favicon.ico";
 
-import heroEye from "@/assets/hero-eye.png";
+import heroEye from "@/assets/hero-portrait.png";
 
 import WelcomeScreen from "@/components/WelcomeScreen";
 import FrontendDeveloperSection from "@/components/FrontendDeveloperSection";

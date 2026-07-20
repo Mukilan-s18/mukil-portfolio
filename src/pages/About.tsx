@@ -668,8 +668,8 @@ export default function About() {
           className="flex flex-col items-center"
         >
           <img
-            src="/assets/prince.png"
-            alt="Prince Kumar"
+            src="/assets/profile.png"
+            alt="Profile Photo"
             className="
               w-[200px]
               sm:w-[280px]
