@@ -60,7 +60,7 @@ export default function About() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prince Singh Resume</title>
+    <title>Mukilan S Resume</title>
     <style>
         * {
             margin: 0;
@@ -454,26 +454,26 @@ export default function About() {
         <div class="resume-wrapper">
             <!-- Header -->
             <div class="header">
-                <img src="https://raw.githubusercontent.com/princekumar-dev74/web-images-link/31f4e55d34521861579bab4ab322372fe7d8cec4/Name%20%3D%20Prince%20Singh.png" alt="Prince Kumar" class="profile-photo">
+                <img src="/assets/prince.png" alt="Mukilan S" class="profile-photo" style="object-position: center; border-radius: 50%; width: 120px; height: 120px;">
                 <div class="header-content">
-                    <h1>Prince Kumar</h1>
-                    <p class="title">Frontend Developer | Cybersecurity & AI Enthusiast</p>
+                    <h1>Mukilan S</h1>
+                    <p class="title">AI/ML Specialist & Full-Stack Developer</p>
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">🏠︎</span>
-                            <span>Gaya, Bihar, India</span>
+                            <span>Chennai, Tamil Nadu</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">✉︎</span>
-                            <a href="mailto:sprince05873@gmail.com">sprince05873@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">🆆</span>
-                            <a href="https://prince-singh-rouge.vercel.app/" target="_blank">Portfolio Website</a>
+                            <a href="mailto:mukilans25361@gmail.com">mukilans25361@gmail.com</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">⛆</span>
-                            <a href="https://github.com/princekumar-dev74" target="_blank">princekumar-dev74</a>
+                            <a href="https://github.com/Mukilan-s18" target="_blank">GitHub: Mukilan-s18</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">in</span>
+                            <a href="https://linkedin.com/in/mukilan-s2486" target="_blank">LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -485,7 +485,7 @@ export default function About() {
                 <section class="section">
                     <h2 class="section-title">Professional Summary</h2>
                     <div class="summary-text">
-                        Passionate and self-driven Class 12 student with a strong interest in frontend development, cybersecurity, and modern web technologies. Skilled in building responsive and interactive web applications using modern frameworks and tools. Enthusiastic about learning new technologies, improving problem-solving skills, and creating innovative digital experiences.
+                        Aspiring Artificial Intelligence and Machine Learning specialist with expertise in Python, deep learning, and predictive analytics. Proven track record of developing end-to-end AI solutions and leveraging modern software engineering practices to solve complex technical challenges.
                     </div>
                 </section>
 
@@ -494,27 +494,37 @@ export default function About() {
                     <h2 class="section-title">Technical Skills</h2>
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <h3>Frontend Development</h3>
+                            <h3>AI & Machine Learning</h3>
                             <div class="skill-tags">
-                                <span class="skill-tag">HTML5</span>
-                                <span class="skill-tag">CSS3</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">React.js</span>
-                                <span class="skill-tag">Next.js</span>
-                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Scikit-Learn</span>
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">Keras</span>
+                                <span class="skill-tag">NumPy</span>
+                                <span class="skill-tag">Pandas</span>
                             </div>
                         </div>
                         <div class="skill-category">
-                            <h3>Tools & Platforms</h3>
+                            <h3>Software Development</h3>
                             <div class="skill-tags">
-                                <span class="skill-tag">Git & GitHub</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">SQL</span>
                                 <span class="skill-tag">Firebase</span>
-                                <span class="skill-tag">Vercel</span>
-                                <span class="skill-tag">Netlify</span>
-                                <span class="skill-tag">Windows Terminal</span>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section class="section">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="education-item">
+                        <h3>Internship in Generative AI | Altruisty Innovation Pvt Ltd</h3>
+                        <p style="color: #888; font-size: 12px; margin-bottom: 8px;">February 2026</p>
+                        <p>• Completed a 15-day internship in Generative AI, gaining valuable experience and insights into the field.</p>
                     </div>
                 </section>
 
@@ -523,16 +533,21 @@ export default function About() {
                     <h2 class="section-title">Projects</h2>
                     <div class="section-content">
                         <div class="project">
-                            <h3>Personal Portfolio Website</h3>
-                            <p>• Developed a modern responsive portfolio website</p>
-                            <p>• Created smooth animations and interactive UI components</p>
-                            <p>• Optimized the website for performance and mobile responsiveness</p>
+                            <h3>Predictive Analytics Engine - FIFA World Cup</h3>
+                            <p>• Engineered a robust machine learning pipeline using Scikit-Learn to predict tournament outcomes based on team Elo ratings.</p>
+                            <p>• Developed ensemble models (Random Forest, XGBoost) and a Monte Carlo engine to process 10,000+ simulations.</p>
+                            <p>• Deployed a real-time interactive dashboard using React and Firebase.</p>
                         </div>
                         <div class="project">
-                            <h3>Frontend Showcase Projects</h3>
-                            <p>• Built multiple frontend UI projects using React and Tailwind CSS</p>
-                            <p>• Developed responsive layouts and reusable components</p>
-                            <p>• Focused on modern design, clean code structure, and user experience</p>
+                            <h3>AeroWeather Dashboard</h3>
+                            <p>• Built a real-time weather analytics dashboard using React 18 and Vite, improving application load performance by 40%.</p>
+                            <p>• Integrated atmospheric forecasting APIs to deliver interactive radar maps and automated deployment via GitHub Actions.</p>
+                        </div>
+                        <div class="project">
+                            <h3>MNIST ANN Digit Classifier</h3>
+                            <p>• Optimized an Artificial Neural Network architecture using TensorFlow/Keras, achieving 98.08% test accuracy.</p>
+                            <p>• Implemented Dropout and Early Stopping techniques to mitigate overfitting.</p>
+                            <p>• Developed a Gradio web application for real-time digit classification.</p>
                         </div>
                     </div>
                 </section>
@@ -541,61 +556,30 @@ export default function About() {
                 <section class="section">
                     <h2 class="section-title">Education</h2>
                     <div class="education-item">
-                        <h3>Senior Secondary Education (Class 12 - PCMB)</h3>
-                        <p>Currently pursuing Class 12 with Physics, Chemistry, Mathematics, and Biology</p>
+                        <h3>B.Tech in Artificial Intelligence and Machine Learning</h3>
+                        <p>Rajalakshmi Engineering College | Expected Graduation: 2028</p>
                     </div>
                 </section>
 
-                <!-- Strengths -->
+                <!-- Certifications -->
                 <section class="section">
-                    <h2 class="section-title">Key Strengths</h2>
+                    <h2 class="section-title">Certifications</h2>
                     <div class="strengths-list">
                         <div class="strength-item">
-                            <span class="strength-icon">✔</span>
-                            <p>Fast Learner</p>
+                            <span class="strength-icon">🏆</span>
+                            <p>Applied Machine Learning and AI (CII)</p>
                         </div>
                         <div class="strength-item">
-                            <span class="strength-icon">✔</span>
-                            <p>Creative Problem Solving</p>
+                            <span class="strength-icon">🏆</span>
+                            <p>Machine Learning & Deep Learning (MathWorks)</p>
                         </div>
                         <div class="strength-item">
-                            <span class="strength-icon">✔</span>
-                            <p>Strong Interest in Technology</p>
+                            <span class="strength-icon">🏆</span>
+                            <p>Data Analytics & Cyber (Deloitte)</p>
                         </div>
                         <div class="strength-item">
-                            <span class="strength-icon">✔</span>
-                            <p>Consistent Self-Learning</p>
-                        </div>
-                        <div class="strength-item">
-                            <span class="strength-icon">✔</span>
-                            <p>Team Collaboration</p>
-                        </div>
-                        <div class="strength-item">
-                            <span class="strength-icon">✔</span>
-                            <p>Goal-Oriented Approach</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Career Objective -->
-                <section class="section">
-                    <h2 class="section-title">Career Objective</h2>
-                    <div class="objective-box">
-                        To build a successful career in the tech industry by continuously improving my skills in frontend development, cybersecurity, and AI technologies while contributing to innovative and impactful projects.
-                    </div>
-                </section>
-
-                <!-- Additional Interests -->
-                <section class="section">
-                    <h2 class="section-title">Additional Interests</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Technical Interests</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Cybersecurity</span>
-                                <span class="skill-tag">Ethical Hacking</span>
-                                <span class="skill-tag">Artificial Intelligence</span>
-                            </div>
+                            <span class="strength-icon">🏆</span>
+                            <p>Manufacturing Analytics (IIT Madras)</p>
                         </div>
                     </div>
                 </section>
@@ -614,7 +598,7 @@ export default function About() {
 
         const a = document.createElement("a");
         a.href = url;
-        a.download = "Prince_Kumar_Resume.html";
+        a.download = "Mukilan_S_Resume.html";
 
         document.body.appendChild(a);
         a.click();
@@ -806,51 +790,27 @@ export default function About() {
               "
             >
               <p>
-                I'm currently a Class 12 student with PCMB, but honestly,
-                my main interest is not in Biology anymore. Before 9th class,
-                I used to think that I would go into the medical field in the
-                future, but as time passed, I started getting more interested
-                in computers and technology.
+                I'm Mukilan, a B.Tech student specializing in Artificial Intelligence and Machine Learning at Rajalakshmi Engineering College.
               </p>
 
               <p>
-                In 11th class, I explored coding more seriously and slowly
-                developed a strong interest in programming, cybersecurity,
-                and AI.
+                My journey into tech began with a fascination for data and how it can be used to predict future outcomes. I quickly developed a strong interest in Python, deep learning, and predictive analytics.
               </p>
 
               <p>
-                Now, coding is something I genuinely enjoy. I like learning
-                new programming languages, building things, and understanding
-                how technology works behind the scenes.
+                Recently, I completed a Generative AI internship at Altruisty Innovation Pvt Ltd, which gave me valuable insights into building end-to-end AI solutions. 
               </p>
 
               <p>
-                Out of everything in tech, ethical hacking and cybersecurity
-                interest me the most because I find it exciting to learn about
-                system security, vulnerabilities, and how hackers think.
+                I enjoy building complex projects, from a predictive analytics engine for the FIFA World Cup using Scikit-Learn to a real-time AeroWeather dashboard using React. I'm always looking for opportunities to leverage modern software engineering practices to solve complex technical challenges.
               </p>
 
               <p>
-                At the same time, I also enjoy using AI tools and understanding
-                how AI can make work smarter and easier.
+                I know there's still a lot to learn in the ever-evolving field of AI, but I enjoy the process and always try to improve my skills step by step.
               </p>
 
               <p>
-                After completing Class 12, I want to move completely into the
-                coding and tech field. My goal is to build a future in
-                cybersecurity, ethical hacking, and AI.
-              </p>
-
-              <p>
-                I know there's still a lot to learn, but I enjoy the process
-                and always try to improve my skills step by step.
-              </p>
-
-              <p>
-                For me, technology is not just a career option anymore —
-                it's something I truly connect with and see myself doing
-                in the future.
+                My goal is to build a successful career in the tech industry by continuously improving my skills in AI and machine learning technologies while contributing to innovative and impactful projects.
               </p>
             </div>
           </div>

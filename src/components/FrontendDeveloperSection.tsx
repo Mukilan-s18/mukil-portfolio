@@ -125,8 +125,8 @@ export default function FrontendDeveloperSection() {
     from-white via-white/60 to-white
     animate-[shine_4s_linear_infinite]"
         >
-          Building intelligent ML models & modern full-stack applications.
-          Turning complex data into engaging digital experiences.
+          Aspiring Artificial Intelligence and Machine Learning specialist with expertise in Python, deep learning, and predictive analytics. 
+          Proven track record of developing end-to-end AI solutions and leveraging modern software engineering practices.
         </motion.p>
 
         <motion.div
@@ -135,7 +135,7 @@ export default function FrontendDeveloperSection() {
           transition={{ duration: 1, delay: 0.8 }}
           className="mt-6 flex flex-wrap gap-4"
         >
-          {["Next.js", "Python", "TensorFlow", "Tailwind CSS"].map((tech) => (
+          {["Python", "Scikit-Learn", "TensorFlow", "React.js", "Node.js"].map((tech) => (
             <div
               key={tech}
               className="

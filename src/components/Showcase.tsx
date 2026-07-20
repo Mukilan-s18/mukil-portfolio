@@ -1,44 +1,49 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 
 const techStack = [
-  { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26", color: "#E34F26" },
-  { name: "CSS3", icon: "https://cdn.simpleicons.org/css/1572B6", color: "#1572B6" },
-  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E", color: "#F7DF1E" },
-  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6", color: "#3178C6" },
-  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB", color: "#61DAFB" },
-  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/FFFFFF", color: "#FFFFFF" },
-  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933", color: "#339933" },
-  { name: "Tailwind", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4", color: "#06B6D4" },
   { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB", color: "#3776AB" },
+  { name: "TensorFlow", icon: "https://cdn.simpleicons.org/tensorflow/FF6F00", color: "#FF6F00" },
+  { name: "Scikit-Learn", icon: "https://cdn.simpleicons.org/scikitlearn/F7931E", color: "#F7931E" },
+  { name: "Keras", icon: "https://cdn.simpleicons.org/keras/D00000", color: "#D00000" },
+  { name: "React.js", icon: "https://cdn.simpleicons.org/react/61DAFB", color: "#61DAFB" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933", color: "#339933" },
+  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E", color: "#F7DF1E" },
+  { name: "Java", icon: "https://cdn.simpleicons.org/openjdk/437291", color: "#437291" },
+  { name: "C", icon: "https://cdn.simpleicons.org/c/A8B9CC", color: "#A8B9CC" },
+  { name: "SQL", icon: "https://cdn.simpleicons.org/mysql/4479A1", color: "#4479A1" },
+  { name: "NumPy", icon: "https://cdn.simpleicons.org/numpy/013243", color: "#013243" },
+  { name: "Pandas", icon: "https://cdn.simpleicons.org/pandas/150458", color: "#150458" },
   { name: "Firebase", icon: "https://cdn.simpleicons.org/firebase/FFCA28", color: "#FFCA28" },
-  { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032", color: "#F05032" },
+  { name: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF", color: "#646CFF" },
   { name: "GitHub", icon: "https://cdn.simpleicons.org/github/FFFFFF", color: "#FFFFFF" },
-  { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/FFFFFF", color: "#FFFFFF" },
-  { name: "Netlify", icon: "https://cdn.simpleicons.org/netlify/00C7B7", color: "#00C7B7" },
-  { name: "Terminal", icon: "https://cdn.simpleicons.org/gnometerminal/4EAA25", color: "#4EAA25" },
 ];
 
 const projects = [
   {
-    tech: "Python + ML",
+    title: "Predictive Analytics Engine",
+    tech: "Scikit-Learn • React",
     thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     github: "https://github.com/Mukilan-s18/FIFA-2026-WINNER-PREDICTION-MODEL",
   },
   {
-    tech: "Python + ML",
-    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
-    github: "https://github.com/Mukilan-s18/mnist-ann-classifier",
+    title: "AeroWeather Dashboard",
+    tech: "React 18 • Vite",
+    thumbnail: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/Mukilan-s18/weather-app",
   },
   {
-    tech: "AI/ML Project",
-    thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070&auto=format&fit=crop",
-    github: "https://github.com/Mukilan-s18/CompileAI",
+    title: "MNIST ANN Classifier",
+    tech: "TensorFlow • Keras",
+    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/Mukilan-s18/mnist-ann-classifier",
   },
 ];
 
 const certificates = [
-  { title: "upcoming", tech: "#", thumbnail: "#" },
-  { title: "upcoming", tech: "#", thumbnail: "#" },
+  { title: "Applied Machine Learning and AI (CII)", tech: "Machine Learning", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" },
+  { title: "Machine Learning & Deep Learning Onramp", tech: "MathWorks", thumbnail: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop" },
+  { title: "Data Analytics & Cyber Job Simulations", tech: "Deloitte", thumbnail: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2070&auto=format&fit=crop" },
+  { title: "Manufacturing Analytics Workshop", tech: "IIT Madras", thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" },
 ];
 
 const GithubIcon = () => (
@@ -81,21 +86,24 @@ function ProjectCard({ item }: { item: typeof projects[0] }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300" />
       </div>
-      <div className="p-5 flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-[0.25em] text-white/40 font-mono">
-          {item.tech}
-        </span>
-        <a
-          href={item.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-8 h-8 rounded-full 
-          bg-white/5 border border-white/15 text-white/60 
-          hover:bg-white/10 hover:text-white hover:border-white/30 
-          transition-all duration-200 active:scale-95"
-        >
-          <GithubIcon />
-        </a>
+      <div className="p-5 flex flex-col justify-between">
+        <h3 className="text-white font-semibold text-sm leading-snug line-clamp-1 mb-2">{item.title}</h3>
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-white/40 font-mono">
+            {item.tech}
+          </span>
+          <a
+            href={item.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-8 h-8 rounded-full 
+            bg-white/5 border border-white/15 text-white/60 
+            hover:bg-white/10 hover:text-white hover:border-white/30 
+            transition-all duration-200 active:scale-95"
+          >
+            <GithubIcon />
+          </a>
+        </div>
       </div>
     </div>
   );

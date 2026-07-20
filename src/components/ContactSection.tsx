@@ -26,7 +26,7 @@ export default function ContactSection() {
 
         const text = `Hello, my name is ${form.name}%0A%0A${form.message}`;
 
-        const phone = "91000000000";
+        const phone = "919360737403";
 
         window.open(
             `https://wa.me/${phone}?text=${text}`,
@@ -148,7 +148,7 @@ export default function ContactSection() {
 
                             {/* gmail */}
                             <a
-                                href="mailto:mukilan.s.2024.aiml@rajalakshmi.edu.in"
+                                href="mailto:mukilans25361@gmail.com"
                                 className="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl
                 border border-white/10
                 bg-white/[0.04]
@@ -178,7 +178,7 @@ export default function ContactSection() {
 
                             {/* whatsapp */}
                             <a
-                                href="https://wa.me/910000000000"
+                                href="https://wa.me/919360737403"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl
