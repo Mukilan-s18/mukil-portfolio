@@ -1,7 +1,7 @@
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import favicon from "/favicon.ico";
+import favicon from "/favicon.png";
 
 import heroEye from "@/assets/hero-portrait.png";
 
