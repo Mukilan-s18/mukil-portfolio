@@ -148,7 +148,7 @@ export default function App() {
 
               {/* Blue vignette edges matching template */}
               <div className="pointer-events-none absolute inset-0">
-                <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black to-transparent" />
+                <div className="absolute left-0 top-0 bottom-0 w-[60%] bg-gradient-to-r from-black via-black/80 to-transparent" />
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
                 <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-black to-transparent" />
@@ -158,36 +158,19 @@ export default function App() {
               <div className="relative z-10 w-full h-full flex flex-col justify-between px-6 md:px-10 pt-24 pb-10">
 
                 {/* Top-left: Giant name (Anton font like template) */}
-                <div className="relative">
-                  {/* Shadow layer to ensure N is visible over the white card */}
-                  <h1
-                    className="uppercase leading-[0.82] tracking-[-0.02em] select-none absolute inset-0"
-                    style={{
-                      fontFamily: "Anton, Impact, Arial Black, sans-serif",
-                      fontSize: "clamp(100px, 18vw, 230px)",
-                      color: "transparent",
-                      textShadow: "0px 10px 40px rgba(0,0,0,0.8)",
-                    }}
-                    aria-hidden="true"
-                  >
-                    {displayed || "\u00A0"}
-                  </h1>
-                  
-                  {/* Foreground layer with original gradient fade effect */}
-                  <h1
-                    className="uppercase leading-[0.82] tracking-[-0.02em] select-none relative"
-                    style={{
-                      fontFamily: "Anton, Impact, Arial Black, sans-serif",
-                      fontSize: "clamp(100px, 18vw, 230px)",
-                      background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 70%, transparent 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    {displayed || "\u00A0"}
-                  </h1>
-                </div>
+                <h1
+                  className="uppercase leading-[0.82] tracking-[-0.02em] select-none"
+                  style={{
+                    fontFamily: "Anton, Impact, Arial Black, sans-serif",
+                    fontSize: "clamp(100px, 18vw, 230px)",
+                    background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 70%, transparent 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  {displayed || "\u00A0"}
+                </h1>
 
                 {/* Top-right: Bold serif tagline */}
                 <p
