@@ -163,10 +163,11 @@ export default function App() {
                   style={{
                     fontFamily: "Anton, Impact, Arial Black, sans-serif",
                     fontSize: "clamp(100px, 18vw, 230px)",
-                    background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 70%, transparent 100%)",
+                    background: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    filter: "drop-shadow(0px 10px 20px rgba(0,0,0,0.5))",
                   }}
                 >
                   {displayed || "\u00A0"}
