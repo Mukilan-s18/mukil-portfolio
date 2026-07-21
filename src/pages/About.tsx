@@ -668,7 +668,7 @@ export default function About() {
           className="flex flex-col items-center"
         >
           <img
-            src="/assets/profile.png"
+            src="/assets/id-card.png"
             alt="Profile Photo"
             className="
               w-[200px]

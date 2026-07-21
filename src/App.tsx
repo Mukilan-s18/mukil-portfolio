@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import favicon from "/favicon.svg";
 
-import heroEye from "@/assets/hero-portrait.png";
+// Hero image removed from imports, directly using public asset
 
 import WelcomeScreen from "@/components/WelcomeScreen";
 import FrontendDeveloperSection from "@/components/FrontendDeveloperSection";
@@ -140,7 +140,7 @@ export default function App() {
               {/* Portrait — centered, full-bleed, fades into black */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
-                  src={heroEye}
+                  src="/assets/id-card.png"
                   alt="Mukilan portrait"
                   className="h-full w-full object-cover object-center"
                   style={{
