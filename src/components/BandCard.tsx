@@ -479,6 +479,7 @@ function Band({
                 <meshPhysicalMaterial
                   {...materials.base}
                   map={texture}
+                  color="#aaaaaa"
                   roughness={0.35}
                   metalness={0.1}
                   clearcoat={1}
