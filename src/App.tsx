@@ -163,9 +163,10 @@ export default function App() {
                   style={{
                     fontFamily: "Anton, Impact, Arial Black, sans-serif",
                     fontSize: "clamp(100px, 18vw, 230px)",
-                    color: "#fff",
-                    mixBlendMode: "difference",
-                    zIndex: 50,
+                    background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 70%, transparent 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                   }}
                 >
                   {displayed || "\u00A0"}
@@ -173,13 +174,11 @@ export default function App() {
 
                 {/* Top-right: Bold serif tagline */}
                 <p
-                  className="absolute top-28 right-8 md:right-12 text-right leading-[1.1] max-w-xs md:max-w-sm font-bold"
+                  className="absolute top-20 right-8 md:right-12 text-right leading-[1.1] max-w-xs md:max-w-sm font-bold"
                   style={{
                     fontFamily: "Poppins, sans-serif",
                     fontSize: "clamp(22px, 3.5vw, 48px)",
-                    color: "#fff",
-                    mixBlendMode: "difference",
-                    zIndex: 50,
+                    color: "rgba(255,255,255,0.9)",
                   }}
                 >
                   Building AI<br />That Feels<br />Intelligent.
