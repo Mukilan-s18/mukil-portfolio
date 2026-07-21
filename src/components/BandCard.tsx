@@ -180,12 +180,12 @@ function Band({
   const texture = useTexture(TEXTURE_PATH);
 
   texture.flipY = false;
-  // The front face of the card has UVs: U from 0.5 to 1.0, V from 0.0 to 0.75.
+  // The front face of the card has UVs: U from 0.0 to 0.5, V from 0.0 to 0.75.
   // To map the entire image (0..1) perfectly to this region:
-  // U: repeat.x = 2, offset.x = -1
-  // V: repeat.y = 1.3333, offset.y = 0
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set(2, 1.333333);
-  texture.offset.set(-1, 0);
+  texture.offset.set(0, 0);
 
   const { width, height } = useThree(
     (state) => state.size
