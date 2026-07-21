@@ -181,6 +181,8 @@ function Band({
 
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
+  texture.center.set(0.5, 0.5);
+  texture.rotation = -Math.PI / 2;
 
   const { width, height } = useThree(
     (state) => state.size
