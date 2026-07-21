@@ -140,13 +140,9 @@ export default function App() {
               {/* Portrait — Aligned to bottom-right as requested */}
               <div className="absolute bottom-0 right-0 w-full md:w-[45%] h-[65%] md:h-[75%] flex items-end justify-end pointer-events-none">
                 <img
-                  src="/assets/hero-portrait.png"
+                  src="/assets/hero-portrait.png?v=2"
                   alt="Mukilan portrait"
-                  className="h-full w-full object-contain object-bottom md:object-right-bottom opacity-50 md:opacity-80"
-                  style={{
-                    maskImage: "linear-gradient(to top, black 60%, transparent 100%)",
-                    WebkitMaskImage: "linear-gradient(to top, black 60%, transparent 100%)",
-                  }}
+                  className="h-full w-full object-contain object-bottom md:object-right-bottom"
                 />
               </div>
 
