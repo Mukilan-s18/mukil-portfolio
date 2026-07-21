@@ -140,9 +140,9 @@ export default function App() {
               {/* Portrait — centered, full-bleed, fades into black */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
-                  src="/assets/id-card.png"
+                  src="/assets/hero-portrait.png"
                   alt="Mukilan portrait"
-                  className="h-full w-full object-cover object-[center_35%] opacity-40"
+                  className="h-full w-full object-contain opacity-40"
                   style={{
                     maskImage: "radial-gradient(ellipse 60% 80% at 50% 40%, black 40%, transparent 100%)",
                     WebkitMaskImage: "radial-gradient(ellipse 60% 80% at 50% 40%, black 40%, transparent 100%)",
