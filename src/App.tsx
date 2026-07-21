@@ -137,15 +137,15 @@ export default function App() {
             ══════════════════════════════════════════════ */}
             <section id="Home" className="relative w-full h-screen min-h-[640px] overflow-hidden bg-black">
 
-              {/* Portrait — centered, full-bleed, fades into black */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/* Portrait — Aligned to bottom-right as requested */}
+              <div className="absolute bottom-0 right-0 w-full md:w-[45%] h-[65%] md:h-[75%] flex items-end justify-end pointer-events-none">
                 <img
                   src="/assets/hero-portrait.png"
                   alt="Mukilan portrait"
-                  className="h-full w-full object-contain opacity-40"
+                  className="h-full w-full object-contain object-bottom md:object-right-bottom opacity-50 md:opacity-80"
                   style={{
-                    maskImage: "radial-gradient(ellipse 60% 80% at 50% 40%, black 40%, transparent 100%)",
-                    WebkitMaskImage: "radial-gradient(ellipse 60% 80% at 50% 40%, black 40%, transparent 100%)",
+                    maskImage: "linear-gradient(to top, black 60%, transparent 100%)",
+                    WebkitMaskImage: "linear-gradient(to top, black 60%, transparent 100%)",
                   }}
                 />
               </div>
