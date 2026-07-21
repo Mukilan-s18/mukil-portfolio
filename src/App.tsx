@@ -142,10 +142,10 @@ export default function App() {
                 <img
                   src="/assets/id-card.png"
                   alt="Mukilan portrait"
-                  className="h-full w-full object-cover object-center opacity-40"
+                  className="h-full w-full object-cover object-top opacity-40"
                   style={{
-                    maskImage: "radial-gradient(ellipse 60% 80% at 50% 50%, black 40%, transparent 100%)",
-                    WebkitMaskImage: "radial-gradient(ellipse 60% 80% at 50% 50%, black 40%, transparent 100%)",
+                    maskImage: "radial-gradient(ellipse 60% 80% at 50% 40%, black 40%, transparent 100%)",
+                    WebkitMaskImage: "radial-gradient(ellipse 60% 80% at 50% 40%, black 40%, transparent 100%)",
                   }}
                 />
               </div>
