@@ -37,7 +37,7 @@ extend({
 });
 
 const GLTF_PATH = "/assets/cards.glb";
-const TEXTURE_PATH = "/assets/id-card-texture.png";
+const TEXTURE_PATH = "/assets/hero-portrait.png";
 
 useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);
@@ -180,8 +180,12 @@ function Band({
   const texture = useTexture(TEXTURE_PATH);
 
   texture.flipY = false;
+  // The card UV expects a 1600x363 image, taking a slice of ~258px from the center.
+  // To make our 1177x1000 portrait fit exactly without squishing, we calculate repeat and offset:
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(3.77, 1);
+  texture.offset.set(-1.385, 0);
 
   const { width, height } = useThree(
     (state) => state.size
