@@ -37,7 +37,7 @@ extend({
 });
 
 const GLTF_PATH = "/assets/cards.glb";
-const TEXTURE_PATH = "/assets/id-card.png";
+const TEXTURE_PATH = "/assets/id-card-texture.png";
 
 useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);
@@ -181,8 +181,6 @@ function Band({
 
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
-  texture.center.set(0.5, 0.5);
-  texture.rotation = -Math.PI / 2;
 
   const { width, height } = useThree(
     (state) => state.size
