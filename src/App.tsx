@@ -148,7 +148,7 @@ export default function App() {
 
               {/* Blue vignette edges matching template */}
               <div className="pointer-events-none absolute inset-0">
-                <div className="absolute left-0 top-0 bottom-0 w-[60%] bg-gradient-to-r from-black via-black/80 to-transparent" />
+                <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black to-transparent" />
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
                 <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-black to-transparent" />
@@ -163,7 +163,7 @@ export default function App() {
                   style={{
                     fontFamily: "Anton, Impact, Arial Black, sans-serif",
                     fontSize: "clamp(100px, 18vw, 230px)",
-                    background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 70%, transparent 100%)",
+                    background: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 60%, rgba(0,0,0,1) 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
