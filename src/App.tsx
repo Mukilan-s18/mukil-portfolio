@@ -138,7 +138,7 @@ export default function App() {
             <section id="Home" className="relative w-full h-screen min-h-[640px] overflow-hidden bg-black">
 
               {/* Portrait — Aligned to bottom-right as requested */}
-              <div className="absolute bottom-0 right-0 md:right-[5%] w-full md:w-[55%] h-[65%] md:h-[85%] flex items-end justify-end pointer-events-none">
+              <div className="absolute bottom-0 right-0 w-full md:w-[55%] h-[65%] md:h-[85%] flex items-end justify-end pointer-events-none">
                 <img
                   src="/assets/hero-portrait.png?v=2"
                   alt="Mukilan portrait"
