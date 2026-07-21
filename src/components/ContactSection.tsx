@@ -236,7 +236,7 @@ export default function ContactSection() {
                             transition={{
                                 duration: 0.4,
                             }}
-                            className="relative bg-black border border-white/15 rounded-[32px]
+                            className="relative bg-white/5 border border-white/15 rounded-[32px]
                             backdrop-blur-xl
                             shadow-[0_20px_80px_rgba(255,255,255,0.06)]
                             overflow-hidden group"
@@ -312,7 +312,7 @@ export default function ContactSection() {
                                             onChange={handleChange}
                                             placeholder="Your Name"
                                             className="w-full h-14 px-6 rounded-[16px]
-                                            bg-white/[0.03] backdrop-blur-2xl
+                                            bg-white/[0.08] backdrop-blur-2xl
                                             shadow-[inset_0_1px_1px_rgba(255,255,255,0.04)]
                                             hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]
                                             border border-white/10
@@ -334,7 +334,7 @@ export default function ContactSection() {
                                             onChange={handleChange}
                                             placeholder="Write your message..."
                                             className="w-full p-5 rounded-[16px] resize-none
-                                            bg-white/[0.03] backdrop-blur-2xl
+                                            bg-white/[0.08] backdrop-blur-2xl
                                             shadow-[inset_0_1px_1px_rgba(255,255,255,0.04)]
                                             hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]
                                             border border-white/10
