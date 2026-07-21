@@ -179,6 +179,7 @@ function Band({
 
   const texture = useTexture(TEXTURE_PATH);
 
+  texture.flipY = false;
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
 
