@@ -163,10 +163,9 @@ export default function App() {
                   style={{
                     fontFamily: "Anton, Impact, Arial Black, sans-serif",
                     fontSize: "clamp(100px, 18vw, 230px)",
-                    background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 70%, transparent 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
+                    color: "#fff",
+                    mixBlendMode: "difference",
+                    zIndex: 50,
                   }}
                 >
                   {displayed || "\u00A0"}
@@ -178,7 +177,9 @@ export default function App() {
                   style={{
                     fontFamily: "Poppins, sans-serif",
                     fontSize: "clamp(22px, 3.5vw, 48px)",
-                    color: "rgba(255,255,255,0.9)",
+                    color: "#fff",
+                    mixBlendMode: "difference",
+                    zIndex: 50,
                   }}
                 >
                   Building AI<br />That Feels<br />Intelligent.
