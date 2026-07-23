@@ -57,7 +57,7 @@ export default function About() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mukilan S Resume</title>
+    <title>Mukilan_S_Resume</title>
     <style>
         * {
             margin: 0;
@@ -65,56 +65,49 @@ export default function About() {
             box-sizing: border-box;
         }
 
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
         body {
             font-family: 'Segoe UI', 'Helvetica Neue', Tahoma, Geneva, Verdana, sans-serif;
             background: #000000;
-            padding: 20px;
-            min-height: 100vh;
-            overflow-x: hidden;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 40px 20px;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
+            background: #121212;
+            border-radius: 16px;
+            border: 1px solid #2a2a2a;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
         .resume-wrapper {
-            background: #0d0d0d;
-            border: 1px solid #222222;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
         }
 
         .header {
-            background: #000000;
-            border-bottom: 2px solid #333333;
-            padding: 45px 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border-bottom: 1px solid #2a2a2a;
             display: flex;
-            gap: 40px;
+            gap: 30px;
             align-items: flex-start;
         }
 
         .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 12px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             border: 3px solid #444444;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
             flex-shrink: 0;
             object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .profile-photo:hover {
-            border-color: #666666;
-            box-shadow: 0 12px 32px rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
+            object-position: top center;
         }
 
         .header-content {
@@ -122,25 +115,24 @@ export default function About() {
         }
 
         .header-content h1 {
-            font-size: 42px;
-            margin-bottom: 8px;
+            font-size: 38px;
+            margin-bottom: 6px;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: #ffffff;
         }
 
         .header-content .title {
-            font-size: 16px;
+            font-size: 15px;
             color: #b0b0b0;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             font-weight: 400;
-            letter-spacing: 0.5px;
         }
 
         .contact-info {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
             font-size: 13px;
         }
 
@@ -148,37 +140,16 @@ export default function About() {
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 8px;
+            padding: 8px 12px;
             background: #1a1a1a;
             border-radius: 6px;
             border: 1px solid #333333;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: #252525;
-            border-color: #444444;
-        }
-
-        .contact-icon {
-            width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #fffcfc;
+            color: #ffffff;
         }
 
         .contact-item a {
             color: #ffffff;
             text-decoration: none;
-            word-break: break-all;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #a1a1a1;
         }
 
         .content {
@@ -187,298 +158,187 @@ export default function About() {
         }
 
         .section {
-            margin-bottom: 35px;
-        }
-
-        .section:last-child {
-            margin-bottom: 0;
+            margin-bottom: 30px;
         }
 
         .section-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #333333;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .section-content {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
         .summary-text {
             color: #d0d0d0;
-            line-height: 1.8;
+            line-height: 1.7;
             font-size: 14px;
             background: #1a1a1a;
-            padding: 20px;
-            border-left: 3px solid #444444;
+            padding: 16px;
             border-radius: 6px;
             border: 1px solid #2a2a2a;
             border-left: 3px solid #555555;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.02);
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 16px;
         }
 
         .skill-category {
             background: #1a1a1a;
-            padding: 20px;
+            padding: 16px;
             border-radius: 8px;
             border: 1px solid #2a2a2a;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.02);
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            background: #1f1f1f;
-            border-color: #333333;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.04);
         }
 
         .skill-category h3 {
             color: #ffffff;
             font-size: 14px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            margin-bottom: 10px;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 6px;
         }
 
         .skill-tag {
-            background: #2a2a2a;
+            background: #252525;
             color: #e0e0e0;
-            padding: 8px 14px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 4px;
             font-size: 12px;
-            font-weight: 500;
-            border: 1px solid #3a3a3a;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            transition: all 0.3s ease;
-            cursor: default;
+            border: 1px solid #333333;
         }
 
-        .skill-tag:hover {
-            background: #333333;
-            border-color: #444444;
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-        }
-
-        .project {
+        .education-item, .project {
             background: #1a1a1a;
-            padding: 18px;
-            border-radius: 6px;
+            padding: 16px;
+            border-radius: 8px;
             border: 1px solid #2a2a2a;
-            border-left: 3px solid #444444;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.02);
-            transition: all 0.3s ease;
+            margin-bottom: 12px;
         }
 
-        .project:hover {
-            background: #1f1f1f;
-            border-color: #333333;
-            border-left-color: #555555;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.04);
-        }
-
-        .project h3 {
-            color: #ffffff;
+        .education-item h3, .project h3 {
             font-size: 15px;
-            margin-bottom: 10px;
-            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 6px;
         }
 
         .project p {
             color: #b0b0b0;
             font-size: 13px;
-            line-height: 1.6;
-        }
-
-        .project p + p {
-            margin-top: 8px;
-        }
-
-        .education-item {
-            background: #1a1a1a;
-            padding: 18px;
-            border-radius: 6px;
-            border: 1px solid #2a2a2a;
-            border-left: 3px solid #444444;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.02);
-        }
-
-        .education-item h3 {
-            color: #ffffff;
-            font-size: 15px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .education-item p {
-            color: #b0b0b0;
-            font-size: 13px;
-            line-height: 1.6;
+            margin-bottom: 4px;
         }
 
         .strengths-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
         }
 
         .strength-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 14px;
             background: #1a1a1a;
+            padding: 12px;
             border-radius: 6px;
             border: 1px solid #2a2a2a;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.02);
-            transition: all 0.3s ease;
-        }
-
-        .strength-item:hover {
-            background: #1f1f1f;
-            border-color: #333333;
-        }
-
-        .strength-icon {
-            color: #808080;
-            font-weight: bold;
-            margin-top: 2px;
-            font-size: 16px;
-        }
-
-        .strength-item p {
-            color: #d0d0d0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-size: 13px;
-            font-weight: 500;
-        }
-
-        .objective-box {
-            background: #1a1a1a;
-            border: 1px solid #333333;
-            color: #d0d0d0;
-            padding: 24px;
-            border-radius: 8px;
-            font-size: 14px;
-            line-height: 1.8;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.02);
         }
 
         @media print {
             body {
-                background: #000000;
-                padding: 0;
+                background: #ffffff !important;
+                color: #000000 !important;
+                padding: 0 !important;
             }
-            .resume-wrapper {
-                box-shadow: none;
+            .container {
+                box-shadow: none !important;
+                border: none !important;
+                background: #ffffff !important;
             }
             .header {
-                page-break-after: avoid;
+                background: #f5f5f5 !important;
+                border-bottom: 2px solid #000 !important;
             }
-            .section {
-                page-break-inside: avoid;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 30px 20px;
-            }
-
             .header-content h1 {
-                font-size: 32px;
+                color: #000000 !important;
             }
-
-            .contact-info {
-                grid-template-columns: 1fr;
+            .header-content .title {
+                color: #444444 !important;
             }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .contact-item {
+                background: #ffffff !important;
+                border: 1px solid #ccc !important;
+                color: #000000 !important;
             }
-
-            .strengths-list {
-                grid-template-columns: 1fr;
+            .contact-item a {
+                color: #000000 !important;
             }
-
             .content {
-                padding: 25px;
+                background: #ffffff !important;
             }
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333333;
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #444444;
+            .section-title {
+                color: #000000 !important;
+                border-bottom: 2px solid #000 !important;
+            }
+            .summary-text, .skill-category, .education-item, .project, .strength-item {
+                background: #f9f9f9 !important;
+                border: 1px solid #ddd !important;
+                color: #000000 !important;
+            }
+            .skill-category h3, .education-item h3, .project h3 {
+                color: #000000 !important;
+            }
+            .project p, .summary-text {
+                color: #222222 !important;
+            }
+            .skill-tag {
+                background: #eee !important;
+                color: #000 !important;
+                border: 1px solid #ccc !important;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="resume-wrapper">
-            <!-- Header -->
             <div class="header">
-                <img src="/assets/mukilan.jpg" alt="Mukilan S" class="profile-photo" style="object-position: top center; object-fit: cover; border-radius: 50%; width: 120px; height: 120px;">
+                <img src="/assets/mukilan.jpg" alt="Mukilan S" class="profile-photo">
                 <div class="header-content">
                     <h1>Mukilan S</h1>
                     <p class="title">AI/ML Specialist & Full-Stack Developer</p>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <span class="contact-icon">🏠︎</span>
+                            <span>🏠︎</span>
                             <span>Chennai, Tamil Nadu</span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">✉︎</span>
+                            <span>✉︎</span>
                             <a href="mailto:mukilans25361@gmail.com">mukilans25361@gmail.com</a>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">⛆</span>
+                            <span>⛆</span>
                             <a href="https://github.com/Mukilan-s18" target="_blank">GitHub: Mukilan-s18</a>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">in</span>
+                            <span>in</span>
                             <a href="https://linkedin.com/in/mukilan-s2486" target="_blank">LinkedIn</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Main Content -->
             <div class="content">
-                <!-- Professional Summary -->
                 <section class="section">
                     <h2 class="section-title">Professional Summary</h2>
                     <div class="summary-text">
@@ -486,7 +346,6 @@ export default function About() {
                     </div>
                 </section>
 
-                <!-- Technical Skills -->
                 <section class="section">
                     <h2 class="section-title">Technical Skills</h2>
                     <div class="skills-grid">
@@ -515,17 +374,15 @@ export default function About() {
                     </div>
                 </section>
 
-                <!-- Experience -->
                 <section class="section">
                     <h2 class="section-title">Experience</h2>
                     <div class="education-item">
                         <h3>Internship in Generative AI | Altruisty Innovation Pvt Ltd</h3>
-                        <p style="color: #888; font-size: 12px; margin-bottom: 8px;">February 2026</p>
+                        <p style="color: #666; font-size: 12px; margin-bottom: 8px;">February 2026</p>
                         <p>• Completed a 15-day internship in Generative AI, gaining valuable experience and insights into the field.</p>
                     </div>
                 </section>
 
-                <!-- Projects -->
                 <section class="section">
                     <h2 class="section-title">Projects</h2>
                     <div class="section-content">
@@ -549,7 +406,6 @@ export default function About() {
                     </div>
                 </section>
 
-                <!-- Education -->
                 <section class="section">
                     <h2 class="section-title">Education</h2>
                     <div class="education-item">
@@ -558,24 +414,23 @@ export default function About() {
                     </div>
                 </section>
 
-                <!-- Certifications -->
                 <section class="section">
                     <h2 class="section-title">Certifications</h2>
                     <div class="strengths-list">
                         <div class="strength-item">
-                            <span class="strength-icon">🏆</span>
+                            <span>🏆</span>
                             <p>Applied Machine Learning and AI (CII)</p>
                         </div>
                         <div class="strength-item">
-                            <span class="strength-icon">🏆</span>
+                            <span>🏆</span>
                             <p>Machine Learning & Deep Learning (MathWorks)</p>
                         </div>
                         <div class="strength-item">
-                            <span class="strength-icon">🏆</span>
+                            <span>🏆</span>
                             <p>Data Analytics & Cyber (Deloitte)</p>
                         </div>
                         <div class="strength-item">
-                            <span class="strength-icon">🏆</span>
+                            <span>🏆</span>
                             <p>Manufacturing Analytics (IIT Madras)</p>
                         </div>
                     </div>
@@ -583,26 +438,22 @@ export default function About() {
             </div>
         </div>
     </div>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.print();
+            }, 300);
+        };
+    </script>
 </body>
 </html>
         `;
 
-        const blob = new Blob([resumeHTML], {
-          type: "text/html"
-        });
-
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "Mukilan_S_Resume.html";
-
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-
-        window.open(url, "_blank");
-        setTimeout(() => URL.revokeObjectURL(url), 10000);
+        const printWindow = window.open("", "_blank");
+        if (printWindow) {
+          printWindow.document.write(resumeHTML);
+          printWindow.document.close();
+        }
 
         setDownloading(false);
         setCountdown(null);
