@@ -158,7 +158,7 @@ export default function WelcomeScreen() {
         >
           <motion.span
             initial={{ width: "0ch" }}
-            animate={{ width: "17.2ch" }}
+            animate={{ width: "18.2ch" }}
             transition={{
               delay: 2.2,
               duration: 2,
