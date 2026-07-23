@@ -143,30 +143,32 @@ export default function App() {
 
                 <div className="relative z-10 w-full h-full flex flex-col justify-between px-6 md:px-10 pt-24 pb-10">
 
-                  <h1
-                    className="uppercase leading-[0.82] tracking-[-0.02em] select-none"
-                    style={{
-                      fontFamily: "Anton, Impact, Arial Black, sans-serif",
-                      fontSize: "clamp(100px, 18vw, 230px)",
-                      background: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 60%, rgba(0,0,0,1) 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    {displayed || "\u00A0"}
-                  </h1>
+                  <div className="flex flex-col sm:block">
+                    <h1
+                      className="uppercase leading-[0.82] tracking-[-0.02em] select-none"
+                      style={{
+                        fontFamily: "Anton, Impact, Arial Black, sans-serif",
+                        fontSize: "clamp(54px, 15vw, 230px)",
+                        background: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 60%, rgba(0,0,0,1) 100%)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                      }}
+                    >
+                      {displayed || "\u00A0"}
+                    </h1>
 
-                  <p
-                    className="absolute top-20 right-8 md:right-12 text-right leading-[1.1] max-w-xs md:max-w-sm font-bold"
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontSize: "clamp(22px, 3.5vw, 48px)",
-                      color: "rgba(255,255,255,0.9)",
-                    }}
-                  >
-                    Building AI<br />That Feels<br />Intelligent.
-                  </p>
+                    <p
+                      className="sm:absolute sm:top-20 sm:right-8 md:right-12 sm:text-right leading-[1.15] max-w-xs md:max-w-sm font-bold mt-3 sm:mt-0"
+                      style={{
+                        fontFamily: "Poppins, sans-serif",
+                        fontSize: "clamp(16px, 3.2vw, 48px)",
+                        color: "rgba(255,255,255,0.9)",
+                      }}
+                    >
+                      Building AI <br className="hidden sm:inline" />That Feels <br className="hidden sm:inline" />Intelligent.
+                    </p>
+                  </div>
 
                   <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mt-auto">
                     <p
