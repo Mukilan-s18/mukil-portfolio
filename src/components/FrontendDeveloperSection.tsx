@@ -36,15 +36,12 @@ export default function FrontendDeveloperSection() {
       transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
       className="relative w-full min-h-screen bg-black text-white overflow-hidden flex items-start px-6 md:px-20 pt-20 md:pt-32 pb-20 select-none"
     >
-      {/* subtle blue side glow — matches template */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[40vw] h-[70vh] bg-blue-700/10 blur-[120px] rounded-full" />
       </div>
 
-      {/* TEXT BLOCK */}
       <div className="relative z-10 max-w-2xl">
 
-        {/* Availability badge */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -65,7 +62,6 @@ export default function FrontendDeveloperSection() {
           >|</motion.span>
         </motion.div>
 
-        {/* Giant heading — exactly like template */}
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
@@ -95,7 +91,6 @@ export default function FrontendDeveloperSection() {
           </motion.h1>
         </div>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -104,10 +99,9 @@ export default function FrontendDeveloperSection() {
           style={{ color: "rgba(255,255,255,0.6)", fontFamily: "Poppins, sans-serif" }}
         >
           Building production-ready ML models &amp; intelligent full-stack apps.
-          From edge AI to agentic pipelines — turning complex data into real solutions.
+          From edge AI to agentic pipelines - turning complex data into real solutions.
         </motion.p>
 
-        {/* Tech pills — same dark rounded style as template */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -125,7 +119,6 @@ export default function FrontendDeveloperSection() {
           ))}
         </motion.div>
 
-        {/* Buttons — SHOW CARD (orange) + ABOUT ME (dark outlined) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -162,7 +155,6 @@ export default function FrontendDeveloperSection() {
         </motion.div>
       </div>
 
-      {/* 3D ID CARD drop-in */}
       <AnimatePresence>
         {showCard && mounted && (
           <motion.div

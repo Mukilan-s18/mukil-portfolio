@@ -12,7 +12,6 @@ export default function About() {
   const [countdown, setCountdown] = useState(null);
   const [downloading, setDownloading] = useState(false);
 
-  // TYPING EFFECT
   useEffect(() => {
     let index = 0;
     let interval;
@@ -37,7 +36,6 @@ export default function About() {
     return () => clearInterval(interval);
   }, []);
 
-  // DOWNLOAD FUNCTION - FIXED
   const handleDownload = () => {
     if (downloading) return;
 
@@ -53,7 +51,6 @@ export default function About() {
       if (time <= 0) {
         clearInterval(timer);
 
-        // Create a complete HTML document for PDF
         const resumeHTML = `
 <!DOCTYPE html>
 <html lang="en">
@@ -616,13 +613,11 @@ export default function About() {
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden text-white px-4 sm:px-6 py-10">
-      {/* ANIMATED BACKGROUND EFFECTS */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl opacity-20" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl opacity-20" />
       </div>
 
-      {/* BACK BUTTON */}
       <motion.button
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -654,10 +649,8 @@ export default function About() {
         <span className="hidden sm:inline">Back</span>
       </motion.button>
 
-      {/* MAIN CONTENT */}
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-8">
 
-        {/* IMAGE SECTION */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -685,7 +678,6 @@ export default function About() {
             "
           />
 
-          {/* DIVIDER LINE */}
           <div
             className="
               mt-6
@@ -701,7 +693,6 @@ export default function About() {
           />
         </motion.div>
 
-        {/* GLASS BOX CONTAINER */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -727,11 +718,9 @@ export default function About() {
             group
           "
         >
-          {/* GLASS LIGHT EFFECT */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
 
-          {/* HEADER SECTION */}
           <div
             className="
               relative
@@ -762,7 +751,6 @@ export default function About() {
             </h1>
           </div>
 
-          {/* SCROLLABLE CONTENT */}
           <div
             className="
               relative
@@ -816,7 +804,6 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* DOWNLOAD BUTTON */}
         <motion.button
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -853,10 +840,8 @@ export default function About() {
             hover:shadow-[0_15px_50px_rgba(255,255,255,0.08)]
           "
         >
-          {/* BUTTON GLOW EFFECT */}
           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
-          {/* BUTTON CONTENT */}
           <div className="relative z-10 flex items-center gap-3">
             <Download
               size={20}

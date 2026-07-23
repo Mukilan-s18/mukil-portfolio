@@ -41,7 +41,6 @@ export default function ContactSection() {
             className="relative w-full min-h-screen bg-black overflow-hidden
             px-4 sm:px-8 md:px-16 lg:px-24 py-24 text-white"
         >
-            {/* premium grid background */}
             <div
                 className="absolute inset-0 opacity-[0.04] pointer-events-none"
                 style={{
@@ -53,7 +52,6 @@ export default function ContactSection() {
                 }}
             />
 
-            {/* background glow */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[-180px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-white/10 blur-[140px] opacity-20" />
 
@@ -64,12 +62,10 @@ export default function ContactSection() {
 
             <div className="relative z-10 max-w-6xl mx-auto">
 
-                {/* heading */}
                 <div className="text-center space-y-5 mb-16">
 
                     <div className="absolute left-1/2 top-0 -translate-x-1/2 w-72 h-72 bg-white/10 blur-[120px] rounded-full opacity-40 animate-pulse" />
 
-                    {/* label */}
                     <div className="relative flex items-center justify-center gap-4 opacity-0 animate-[fadeSlideDown_0.8s_ease_forwards]">
 
                         <div className="relative overflow-hidden">
@@ -89,7 +85,6 @@ export default function ContactSection() {
                         </div>
                     </div>
 
-                    {/* title */}
                     <div className="relative overflow-hidden">
                         <h1
                             className="font-black tracking-tight leading-none
@@ -111,10 +106,8 @@ export default function ContactSection() {
                     </div>
                 </div>
 
-                {/* layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                    {/* left side */}
                     <div
                         className="flex flex-col items-center lg:items-start
         text-center lg:text-left
@@ -122,7 +115,6 @@ export default function ContactSection() {
         animate-[fadeSlideUp_0.8s_ease_0.35s_forwards]"
                     >
 
-                        {/* heading / text */}
                         <div className="space-y-4">
 
                             <p
@@ -143,10 +135,8 @@ export default function ContactSection() {
 
                         </div>
 
-                        {/* social icons */}
                         <div className="flex items-center justify-center lg:justify-start gap-5 mt-2">
 
-                            {/* gmail */}
                             <a
                                 href="mailto:mukilan.s.2024.aiml@rajalakshmi.edu.in"
                                 className="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl
@@ -176,7 +166,6 @@ export default function ContactSection() {
                                 />
                             </a>
 
-                            {/* whatsapp */}
                             <a
                                 href="https://wa.me/919360737403"
                                 target="_blank"
@@ -212,7 +201,6 @@ export default function ContactSection() {
                         </div>
                     </div>
 
-                    {/* contact card */}
                     <div
                         className="relative rounded-[32px]
                         overflow-hidden opacity-0
@@ -242,7 +230,6 @@ export default function ContactSection() {
                             overflow-hidden group"
                         >
 
-                            {/* animated border */}
                             <div className="absolute inset-0 rounded-[32px] overflow-hidden">
                                 <div
                                     className="absolute inset-[-200%]
@@ -254,7 +241,6 @@ export default function ContactSection() {
                                 />
                             </div>
 
-                            {/* glow */}
                             <div
                                 className="absolute w-72 h-72 rounded-full pointer-events-none
                                 blur-[90px] opacity-20 transition-all duration-200"
@@ -266,7 +252,6 @@ export default function ContactSection() {
                                 }}
                             />
 
-                            {/* top gradient */}
                             <div
                                 className="absolute inset-0 opacity-30"
                                 style={{
@@ -275,15 +260,12 @@ export default function ContactSection() {
                                 }}
                             />
 
-                            {/* top line */}
                             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-60" />
 
-                            {/* extra glow */}
                             <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 bg-white/5 blur-[100px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity duration-700" />
 
                             <div className="relative z-10 p-6 sm:p-7 space-y-6">
 
-                                {/* top */}
                                 <div className="space-y-3">
                                     <div className="flex items-baseline gap-3">
                                         <h2 className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-white to-white/70 bg-clip-text text-transparent">
@@ -296,14 +278,12 @@ export default function ContactSection() {
                                     </div>
 
                                     <p className="text-sm text-white/35 leading-relaxed">
-                                        Your message opens directly in WhatsApp—no spam, just real connection.
+                                        Your message opens directly in WhatsApp-no spam, just real connection.
                                     </p>
                                 </div>
 
-                                {/* form */}
                                 <div className="space-y-4">
 
-                                    {/* input */}
                                     <div className="relative group/input">
                                         <input
                                             type="text"
@@ -325,7 +305,6 @@ export default function ContactSection() {
                                         />
                                     </div>
 
-                                    {/* textarea */}
                                     <div className="relative group/textarea">
                                         <textarea
                                             rows={4}
@@ -347,7 +326,6 @@ export default function ContactSection() {
                                         />
                                     </div>
 
-                                    {/* button */}
                                     <button
                                         onClick={handleSend}
                                         disabled={!form.name || !form.message}
@@ -373,7 +351,6 @@ export default function ContactSection() {
                                             Send Message
                                         </span>
 
-                                        {/* button shine */}
                                         <div
                                             className="absolute inset-0 opacity-0
                                             group-hover/btn:opacity-100 transition-opacity duration-500"
@@ -386,7 +363,6 @@ export default function ContactSection() {
                                         />
                                     </button>
 
-                                    {/* status */}
                                     <div className="flex items-center gap-2 pt-4 border-t border-white/10">
                                         <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
 
@@ -507,12 +483,9 @@ export default function ContactSection() {
                     }
                 }
             `}</style>
-            
-            {/* footer */}
             <div className="relative z-10 mt-24 border-t border-white/10 pt-12 pb-8">
 
                 <div className="relative flex flex-col items-center gap-7">
-                    
 
                     <h2
                         className="text-center font-black tracking-[0.25em] uppercase
@@ -530,9 +503,7 @@ export default function ContactSection() {
                             Follow Me
                         </span>
                     </h2>
-                    
                     <div className="flex flex-wrap items-center justify-center gap-5">
-                        {/* LinkedIn */}
                         <a
                             href="https://www.linkedin.com/in/mukilan-s2486/"
                             target="_blank"
@@ -552,17 +523,13 @@ export default function ContactSection() {
                                 }}
                             />
 
-                            {/* inner dark glass */}
                             <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
 
-                            {/* glow */}
                             <div className="absolute -inset-6 blur-2xl transition-all duration-500 group-hover:bg-[#0077B5]/20" />
 
-                            {/* icon */}
                             <FaLinkedin className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-[#0077B5]" />
                         </a>
 
-                        {/* GitHub */}
                         <a
                             href="https://github.com/Mukilan-s18"
                             target="_blank"
@@ -581,7 +548,6 @@ export default function ContactSection() {
                             <FaGithub className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-white" />
                         </a>
 
-                        {/* WhatsApp */}
                         <a
                             href="https://wa.me/919360737403"
                             target="_blank"
@@ -605,7 +571,6 @@ export default function ContactSection() {
 
 <p className="text-center text-sm tracking-[0.22em] text-white/35">
   Copyright © {new Date().getFullYear()} All Rights Reserved | Created by{" "}
-  
   <span className="relative inline-block text-white/70">
     Mukilan S
     <span className="absolute left-1/2 -translate-x-1/2 -bottom-2">

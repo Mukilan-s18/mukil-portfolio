@@ -28,7 +28,7 @@ const projects = [
     github: "https://github.com/Mukilan-s18/GraphOne-ai-data-intelligence-pipeline",
   },
   {
-    title: "StampedeZero — Crowd Safety AI",
+    title: "StampedeZero - Crowd Safety AI",
     tech: "YOLOv8 • PyTorch • FastAPI • React",
     thumbnail: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2070&auto=format&fit=crop",
     github: "https://github.com/Mukilan-s18/StampedeZero",
@@ -187,7 +187,6 @@ function CertCard({ item }: { item: typeof certificates[0] }) {
   );
 }
 
-// ─── 3D Dome Sphere Tech Stack ────────────────────────────────────────────────
 function TechGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
@@ -206,7 +205,6 @@ function TechGrid() {
   const RADIUS = 160;
   const n = techStack.length;
 
-  // Fibonacci sphere positions
   const positions = useRef<{ x: number; y: number; z: number }[]>([]);
   useEffect(() => {
     const goldenAngle = Math.PI * (3 - Math.sqrt(5));
@@ -266,7 +264,6 @@ function TechGrid() {
     return () => { if (rafId.current) cancelAnimationFrame(rafId.current); };
   }, []);
 
-  // Mouse events
   const onMouseDown = (e: React.MouseEvent) => {
     isDragging.current = true;
     lastMX.current = e.clientX;
@@ -302,7 +299,6 @@ function TechGrid() {
     };
   }, []);
 
-  // Touch events
   const onTouchStart = (e: React.TouchEvent) => {
     isDragging.current = true;
     lastMX.current = e.touches[0].clientX;
@@ -329,7 +325,6 @@ function TechGrid() {
 
   return (
     <div className="space-y-4">
-      {/* Decorative header */}
       <div className="flex items-center justify-center gap-3 text-white/40">
         <div className="h-px w-10 bg-gradient-to-r from-transparent to-white/30" />
         <span className="text-[10px] uppercase tracking-[0.4em] font-mono">
@@ -338,7 +333,6 @@ function TechGrid() {
         <div className="h-px w-10 bg-gradient-to-l from-transparent to-white/30" />
       </div>
 
-      {/* Dome sphere */}
       <div
         ref={containerRef}
         className="relative w-full flex items-center justify-center select-none"
@@ -348,7 +342,6 @@ function TechGrid() {
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        {/* Ambient glow */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -357,7 +350,6 @@ function TechGrid() {
           }}
         />
 
-        {/* Scene */}
         <div
           ref={sceneRef}
           className="relative"
@@ -409,7 +401,6 @@ function TechGrid() {
           ))}
         </div>
 
-        {/* Fade edge overlay */}
         <div
           className="absolute inset-0 pointer-events-none rounded-full"
           style={{ boxShadow: "inset 0 0 80px 40px rgba(0,0,0,0.7)" }}
@@ -418,7 +409,6 @@ function TechGrid() {
     </div>
   );
 }
-// ─────────────────────────────────────────────────────────────────────────────
 
 type TabId = "projects" | "certificates" | "tech";
 
@@ -467,7 +457,6 @@ export default function ShowcaseSection() {
   return (
     <section className="relative w-full min-h-[85vh] md:min-h-screen bg-black overflow-hidden text-white px-4 sm:px-8 md:px-16 lg:px-24 py-0 md:py-12 -mt-16 sm:mt-0 md:mt-12">
       <div className="relative z-10 flex flex-col items-center max-w-6xl mx-auto">
-        {/* Label */}
         <div className="relative flex items-center justify-center gap-4 mb-5 opacity-0 animate-[fadeSlideDown_0.8s_ease_forwards]">
           <div className="relative overflow-hidden">
             <div className="w-10 h-px bg-white/20" />
@@ -482,7 +471,6 @@ export default function ShowcaseSection() {
           </div>
         </div>
 
-        {/* Heading */}
         <div className="relative overflow-hidden mb-12">
           <h1
             className="text-center font-black tracking-tight leading-none drop-shadow-[0_0_25px_rgba(255,255,255,0.15)] text-white opacity-0 whitespace-nowrap animate-[headingReveal_1s_cubic-bezier(0.22,1,0.36,1)_0.15s_forwards]"
@@ -494,7 +482,6 @@ export default function ShowcaseSection() {
           </h1>
         </div>
 
-        {/* Tab Switcher */}
         <div
           className="relative flex items-center p-1.5 rounded-full border border-white/20 bg-white/[0.08] mb-14 w-full max-w-md opacity-0 animate-[fadeSlideUp_0.6s_ease_0.3s_forwards] shadow-2xl shadow-black/40"
           style={{ backdropFilter: "blur(30px)" }}
@@ -526,7 +513,6 @@ export default function ShowcaseSection() {
           ))}
         </div>
 
-        {/* Content area with swipe */}
         <div
           key={animKey}
           className="w-full opacity-0 animate-[contentIn_0.5s_cubic-bezier(0.22,1,0.36,1)_forwards]"

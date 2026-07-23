@@ -6,11 +6,9 @@ export default function WelcomeScreen() {
   const icons = [Code2, User, Globe];
 
   useEffect(() => {
-    // scroll band
     document.body.style.overflow = "hidden";
 
     return () => {
-      // welcome screen hatne ke baad scroll wapas
       document.body.style.overflow = "auto";
     };
   }, []);
@@ -29,7 +27,6 @@ export default function WelcomeScreen() {
       }}
       className="fixed inset-0 z-[99999] flex items-center justify-center bg-black overflow-hidden p-5"
     >
-      {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-white/10 blur-[120px] rounded-full" />
         <div className="absolute bottom-[-150px] right-[-80px] w-[300px] h-[300px] bg-white/5 blur-[100px] rounded-full" />
@@ -44,7 +41,6 @@ export default function WelcomeScreen() {
         }}
         className="relative text-center text-white flex flex-col items-center gap-5 w-full max-w-[340px]"
       >
-        {/* Icons */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -89,7 +85,6 @@ export default function WelcomeScreen() {
           ))}
         </motion.div>
 
-        {/* Text */}
         <div className="flex flex-col items-center gap-1">
           <div className="flex items-center justify-center gap-2 flex-wrap">
             <motion.span
@@ -133,7 +128,6 @@ export default function WelcomeScreen() {
           </motion.h1>
         </div>
 
-        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
@@ -146,7 +140,6 @@ export default function WelcomeScreen() {
           Creating Websites That Feel Alive.
         </motion.p>
 
-        {/* Website Badge */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -182,7 +175,6 @@ export default function WelcomeScreen() {
           />
         </motion.div>
 
-        {/* Bottom Loading Line */}
         <div className="mt-10 w-[240px] bg-white/20 h-[2px] overflow-hidden rounded-full">
           <motion.div
             initial={{ width: "10%" }}

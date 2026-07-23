@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import favicon from "/favicon.svg";
 
-// Hero image removed from imports, directly using public asset
 
 import WelcomeScreen from "@/components/WelcomeScreen";
 import FrontendDeveloperSection from "@/components/FrontendDeveloperSection";
@@ -20,7 +19,6 @@ export default function App() {
   const [time, setTime] = useState("");
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  /* — typing effect for hero name — */
   const heroName = "MUKILAN";
   const [displayed, setDisplayed] = useState("");
 
@@ -38,7 +36,6 @@ export default function App() {
     return () => { document.body.style.overflow = "auto"; };
   }, [showWelcome, mobileMenu]);
 
-  /* live clock */
   useEffect(() => {
     const update = () =>
       setTime(new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true }));
@@ -47,7 +44,6 @@ export default function App() {
     return () => clearInterval(id);
   }, []);
 
-  /* typing effect */
   useEffect(() => {
     let i = 0;
     setDisplayed("");
@@ -73,15 +69,11 @@ export default function App() {
         element={
           <div className="min-h-screen bg-black text-white overflow-x-hidden" style={{ fontFamily: "Poppins, sans-serif" }}>
 
-            {/* ── WELCOME SCREEN ── */}
             <AnimatePresence>{showWelcome && <WelcomeScreen />}</AnimatePresence>
 
-            {/* ══════════════════════════════════════════════
-                NAV — exact replica of Prince Singh template
-            ══════════════════════════════════════════════ */}
+            {}
             <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 bg-black/80 backdrop-blur-md border-b border-white/[0.06]">
 
-              {/* Logo */}
               <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo("Home")}>
                 <img src={favicon} alt="Logo" className="w-7 h-7 rounded-full object-cover" />
                 <span className="text-[11px] tracking-[0.28em] text-white/70 uppercase font-semibold font-mono">
@@ -89,7 +81,6 @@ export default function App() {
                 </span>
               </div>
 
-              {/* Desktop nav */}
               <ul className="hidden md:flex items-center gap-9 text-[11px] tracking-[0.22em] text-white/60 uppercase font-mono">
                 {navLinks.map(({ label, id }) => (
                   <li
@@ -102,18 +93,15 @@ export default function App() {
                 ))}
               </ul>
 
-              {/* Clock (desktop) */}
               <div className="hidden md:block text-[11px] tracking-[0.28em] text-white/50 uppercase font-mono">
                 {time}
               </div>
 
-              {/* Mobile hamburger */}
               <button onClick={() => setMobileMenu(!mobileMenu)} className="md:hidden text-white z-50">
                 {mobileMenu ? <X size={22} /> : <Menu size={22} />}
               </button>
             </nav>
 
-            {/* Mobile Menu */}
             {mobileMenu && (
               <div className="fixed inset-0 z-40 bg-black/98 backdrop-blur-xl flex flex-col items-center justify-center gap-9 text-white uppercase tracking-[0.3em] text-sm font-mono md:hidden">
                 <div className="absolute top-24 text-center">
@@ -132,12 +120,9 @@ export default function App() {
               </div>
             )}
 
-            {/* ══════════════════════════════════════════════
-                HERO — Giant name + portrait + tagline right
-            ══════════════════════════════════════════════ */}
+            {}
             <section id="Home" className="relative w-full h-screen min-h-[640px] overflow-hidden bg-black">
 
-              {/* Portrait — Aligned to bottom-right as requested */}
               <div className="absolute bottom-0 right-0 w-full md:w-[55%] h-[65%] md:h-[85%] flex items-end justify-end pointer-events-none">
                 <img
                   src="/assets/hero-portrait.png?v=2"
@@ -146,7 +131,6 @@ export default function App() {
                 />
               </div>
 
-              {/* Blue vignette edges matching template */}
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black to-transparent" />
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black to-transparent" />
@@ -154,10 +138,8 @@ export default function App() {
                 <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-black to-transparent" />
               </div>
 
-              {/* Content overlay */}
               <div className="relative z-10 w-full h-full flex flex-col justify-between px-6 md:px-10 pt-24 pb-10">
 
-                {/* Top-left: Giant name (Anton font like template) */}
                 <h1
                   className="uppercase leading-[0.82] tracking-[-0.02em] select-none"
                   style={{
@@ -172,7 +154,6 @@ export default function App() {
                   {displayed || "\u00A0"}
                 </h1>
 
-                {/* Top-right: Bold serif tagline */}
                 <p
                   className="absolute top-20 right-8 md:right-12 text-right leading-[1.1] max-w-xs md:max-w-sm font-bold"
                   style={{
@@ -184,7 +165,6 @@ export default function App() {
                   Building AI<br />That Feels<br />Intelligent.
                 </p>
 
-                {/* Bottom row: tagline left + GitHub button right */}
                 <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mt-auto">
                   <p
                     className="text-sm md:text-base lg:text-lg leading-relaxed max-w-sm"
@@ -213,7 +193,6 @@ export default function App() {
               </div>
             </section>
 
-            {/* ── MARQUEE TICKER ── */}
             <div className="bg-black border-t border-b border-white/[0.07] py-4 overflow-hidden">
               <div className="flex items-center gap-14 animate-marquee whitespace-nowrap">
                 {[...Array(6)].flatMap(() =>
@@ -226,7 +205,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* ── SECTIONS ── */}
             <section id="about">
               <FrontendDeveloperSection />
             </section>

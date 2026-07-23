@@ -180,8 +180,6 @@ function Band({
   const texture = useTexture(TEXTURE_PATH);
 
   texture.flipY = false;
-  // The front face of the card has UVs: U from 0.0 to 0.5, V from 0.0 to 0.75.
-  // To map the entire image (0..1) perfectly to this region:
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set(2, 1.333333);
@@ -510,10 +508,8 @@ function Band({
       </group>
 
       <mesh ref={band}>
-        {/* @ts-expect-error meshline */}
         <meshLineGeometry />
 
-        {/* @ts-expect-error meshline */}
         <meshLineMaterial
           transparent
           opacity={0.9}
