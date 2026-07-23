@@ -167,7 +167,7 @@ export const certificates: Certificate[] = [
     title: "NPTEL Certification I",
     tech: "NPTEL / IIT",
     thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-    fileUrl: "/assets/Certifications/Nptel 1_compressed.pdf",
+    fileUrl: "/assets/Certifications/Nptel 1.pdf",
   },
   {
     title: "NPTEL Certification II",
