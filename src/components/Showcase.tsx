@@ -76,23 +76,39 @@ function ProjectCard({ item }: { item: typeof projects[0] }) {
 function CertCard({ item }: { item: typeof certificates[0] }) {
   const [downloading, setDownloading] = useState(false);
 
-  const handleDownload = async () => {
+  const handleDownload = () => {
     setDownloading(true);
-    try {
-      const response = await fetch(item.thumbnail, { mode: "cors" });
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `${item.title}.jpg`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error("Download failed:", err);
-    }
-    setTimeout(() => setDownloading(false), 500);
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext("2d");
+        if (ctx) {
+          ctx.drawImage(img, 0, 0);
+          const dataUrl = canvas.toDataURL("image/jpeg");
+          const link = document.createElement("a");
+          link.href = dataUrl;
+          link.download = `${item.title.replace(/[^a-zA-Z0-9]/g, "_")}.jpg`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setDownloading(false);
+          return;
+        }
+      } catch (e) {
+        console.warn("Canvas export failed:", e);
+      }
+      window.open(item.thumbnail, "_blank");
+      setDownloading(false);
+    };
+    img.onerror = () => {
+      window.open(item.thumbnail, "_blank");
+      setDownloading(false);
+    };
+    img.src = item.thumbnail;
   };
 
   return (
