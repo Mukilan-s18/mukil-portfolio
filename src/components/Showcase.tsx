@@ -78,6 +78,20 @@ function CertCard({ item }: { item: typeof certificates[0] }) {
 
   const handleDownload = () => {
     setDownloading(true);
+
+    if (item.fileUrl) {
+      const link = document.createElement("a");
+      link.href = item.fileUrl;
+      const extension = item.fileUrl.endsWith(".pdf") ? "pdf" : item.fileUrl.endsWith(".png") ? "png" : "jpg";
+      link.download = `${item.title.replace(/[^a-zA-Z0-9]/g, "_")}.${extension}`;
+      link.target = "_blank";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => setDownloading(false), 500);
+      return;
+    }
+
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.onload = () => {

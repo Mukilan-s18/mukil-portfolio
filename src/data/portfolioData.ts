@@ -10,6 +10,7 @@ export interface Certificate {
   title: string;
   tech: string;
   thumbnail: string;
+  fileUrl?: string;
 }
 
 export interface TechItem {
@@ -132,8 +133,52 @@ export const projects: Project[] = [
 ];
 
 export const certificates: Certificate[] = [
-  { title: "Applied Machine Learning and AI (CII)", tech: "Machine Learning", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" },
-  { title: "Machine Learning & Deep Learning Onramp", tech: "MathWorks", thumbnail: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop" },
-  { title: "Data Analytics & Cyber Job Simulations", tech: "Deloitte", thumbnail: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2070&auto=format&fit=crop" },
-  { title: "Manufacturing Analytics Workshop", tech: "IIT Madras", thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" },
+  {
+    title: "Applied Machine Learning and AI (CII)",
+    tech: "Machine Learning",
+    thumbnail: "/assets/Certifications/Certificate.png",
+    fileUrl: "/assets/Certifications/Certificate.png",
+  },
+  {
+    title: "Machine Learning Onramp",
+    tech: "MathWorks",
+    thumbnail: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/ML_certificate.pdf",
+  },
+  {
+    title: "Deep Learning Onramp",
+    tech: "MathWorks",
+    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/certificate DL.pdf",
+  },
+  {
+    title: "Data Analytics Job Simulation",
+    tech: "Deloitte",
+    thumbnail: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/Data Analytics Job Simulation By Deloitte.pdf",
+  },
+  {
+    title: "Cybersecurity Job Simulation",
+    tech: "Deloitte",
+    thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/Deloitte cyberjob simulation.pdf",
+  },
+  {
+    title: "NPTEL Certification I",
+    tech: "NPTEL / IIT",
+    thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/Nptel 1_compressed.pdf",
+  },
+  {
+    title: "NPTEL Certification II",
+    tech: "NPTEL / IIT",
+    thumbnail: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/Nptel 2.pdf",
+  },
+  {
+    title: "Navigating an Entry Level Job Search",
+    tech: "LinkedIn Learning",
+    thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop",
+    fileUrl: "/assets/Certifications/CertificateOfCompletion_Navigating an EntryLevel Job Search.pdf",
+  },
 ];
