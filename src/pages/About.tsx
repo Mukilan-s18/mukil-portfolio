@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import html2pdf from "html2pdf.js";
+import { personalInfo, projects, certificates } from "../data/portfolioData";
 
 export default function About() {
   const navigate = useNavigate();
@@ -42,13 +42,25 @@ export default function About() {
     setDownloading(true);
     setCountdown(3);
 
+    const projectCardsHtml = projects.map(p => `
+      <div class="project">
+        <h3>${p.title} (${p.tech})</h3>
+        <p>${p.description || ''}</p>
+        <p><a href="${p.github}" target="_blank" style="color: #66b2ff;">${p.github}</a></p>
+      </div>
+    `).join('');
+
+    const certsHtml = certificates.map(c => `
+      <div class="strength-item"><span>🏆</span> <p>${c.title} — ${c.tech}</p></div>
+    `).join('');
+
     const resumeHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mukilan_S_Resume</title>
+    <title>${personalInfo.name.replace(/\s+/g, '_')}_Resume</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #000000; color: #ffffff; line-height: 1.6; padding: 40px 20px; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
@@ -81,7 +93,6 @@ export default function About() {
             .header-content h1 { color: #000000 !important; }
             .header-content .title { color: #444444 !important; }
             .contact-item { background: #ffffff !important; border: 1px solid #ccc !important; color: #000000 !important; }
-            .contact-item a { color: #000000 !important; }
             .content { background: #ffffff !important; }
             .section-title { color: #000000 !important; border-bottom: 2px solid #000 !important; }
             .summary-text, .skill-category, .education-item, .project, .strength-item { background: #f9f9f9 !important; border: 1px solid #ddd !important; color: #000000 !important; }
@@ -95,15 +106,15 @@ export default function About() {
     <div class="container">
         <div class="resume-wrapper">
             <div class="header">
-                <img src="/assets/hero-portrait.png" alt="Mukilan S" class="profile-photo">
+                <img src="/assets/hero-portrait.png" alt="${personalInfo.name}" class="profile-photo">
                 <div class="header-content">
-                    <h1>Mukilan S</h1>
-                    <p class="title">AI/ML Specialist & Full-Stack Developer</p>
+                    <h1>${personalInfo.name}</h1>
+                    <p class="title">${personalInfo.title}</p>
                     <div class="contact-info">
-                        <div class="contact-item"><span>🏠︎</span> <span>Chennai, Tamil Nadu</span></div>
-                        <div class="contact-item"><span>✉︎</span> <a href="mailto:mukilans25361@gmail.com">mukilans25361@gmail.com</a></div>
-                        <div class="contact-item"><span>⛆</span> <a href="https://github.com/Mukilan-s18" target="_blank">GitHub: Mukilan-s18</a></div>
-                        <div class="contact-item"><span>in</span> <a href="https://linkedin.com/in/mukilan-s2486" target="_blank">LinkedIn</a></div>
+                        <div class="contact-item"><span>🏠︎</span> <span>${personalInfo.location}</span></div>
+                        <div class="contact-item"><span>✉︎</span> <a href="mailto:${personalInfo.email}">${personalInfo.email}</a></div>
+                        <div class="contact-item"><span>⛆</span> <a href="${personalInfo.github}" target="_blank">GitHub: ${personalInfo.githubUsername}</a></div>
+                        <div class="contact-item"><span>in</span> <a href="${personalInfo.linkedin}" target="_blank">LinkedIn</a></div>
                     </div>
                 </div>
             </div>
@@ -111,9 +122,7 @@ export default function About() {
             <div class="content">
                 <section class="section">
                     <h2 class="section-title">Professional Summary</h2>
-                    <div class="summary-text">
-                        Aspiring Artificial Intelligence and Machine Learning specialist with expertise in Python, deep learning, and predictive analytics. Proven track record of developing end-to-end AI solutions and leveraging modern software engineering practices to solve complex technical challenges.
-                    </div>
+                    <div class="summary-text">${personalInfo.summary}</div>
                 </section>
 
                 <section class="section">
@@ -146,51 +155,34 @@ export default function About() {
 
                 <section class="section">
                     <h2 class="section-title">Experience</h2>
-                    <div class="education-item">
-                        <h3>Internship in Generative AI | Altruisty Innovation Pvt Ltd</h3>
-                        <p style="color: #666; font-size: 12px; margin-bottom: 8px;">February 2026</p>
-                        <p>• Completed a 15-day internship in Generative AI, gaining valuable experience and insights into the field.</p>
-                    </div>
+                    ${personalInfo.experience.map(e => `
+                      <div class="education-item">
+                        <h3>${e.role} | ${e.company}</h3>
+                        <p style="color: #666; font-size: 12px; margin-bottom: 8px;">${e.date}</p>
+                        ${e.details.map(d => `<p>• ${d}</p>`).join('')}
+                      </div>
+                    `).join('')}
                 </section>
 
                 <section class="section">
                     <h2 class="section-title">Projects</h2>
                     <div class="section-content">
-                        <div class="project">
-                            <h3>Predictive Analytics Engine - FIFA World Cup</h3>
-                            <p>• Engineered a machine learning pipeline using Scikit-Learn to predict tournament outcomes based on team Elo ratings.</p>
-                            <p>• Developed ensemble models (Random Forest, XGBoost) and a Monte Carlo engine to process 10,000+ simulations.</p>
-                            <p>• Deployed a real-time interactive dashboard using React and Firebase.</p>
-                        </div>
-                        <div class="project">
-                            <h3>AeroWeather Dashboard</h3>
-                            <p>• Built a real-time weather analytics dashboard using React 18 and Vite, improving application load performance by 40%.</p>
-                            <p>• Integrated atmospheric forecasting APIs to deliver interactive radar maps and automated deployment via GitHub Actions.</p>
-                        </div>
-                        <div class="project">
-                            <h3>MNIST ANN Digit Classifier</h3>
-                            <p>• Optimized an Artificial Neural Network architecture using TensorFlow/Keras, achieving 98.08% test accuracy.</p>
-                            <p>• Implemented Dropout and Early Stopping techniques to mitigate overfitting.</p>
-                            <p>• Developed a Gradio web application for real-time digit classification.</p>
-                        </div>
+                        ${projectCardsHtml}
                     </div>
                 </section>
 
                 <section class="section">
                     <h2 class="section-title">Education</h2>
                     <div class="education-item">
-                        <h3>B.Tech in Artificial Intelligence and Machine Learning</h3>
-                        <p>Rajalakshmi Engineering College | Expected Graduation: 2028</p>
+                        <h3>${personalInfo.education.degree}</h3>
+                        <p>${personalInfo.education.institution} | ${personalInfo.education.graduation}</p>
                     </div>
                 </section>
 
                 <section class="section">
                     <h2 class="section-title">Certifications</h2>
                     <div class="strengths-list">
-                        <div class="strength-item"><span>🏆</span> <p>Applied Machine Learning and AI (CII)</p></div>
-                        <div class="strength-item"><span>🏆</span> <p>Machine Learning & Deep Learning (MathWorks)</p></div>
-                        <div class="strength-item"><span>🏆</span> <p>Data Analytics & Cyber (Deloitte)</p></div>
-                        <div class="strength-item"><span>🏆</span> <p>Manufacturing Analytics (IIT Madras)</p></div>
+                        ${certsHtml}
                     </div>
                 </section>
             </div>
