@@ -14,7 +14,13 @@ export default function FrontendDeveloperSection() {
 
   const navigate = useNavigate();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    // Preload 3D Card chunk and texture in background so clicking "Show Card" opens instantly
+    import("./BandCard");
+    const img = new Image();
+    img.src = "/assets/id-card.png";
+  }, []);
 
   useEffect(() => {
     if (goAbout) {

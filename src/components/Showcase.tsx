@@ -60,19 +60,19 @@ const projects = [
   {
     title: "Predictive Analytics Engine - FIFA World Cup",
     tech: "Scikit-Learn • XGBoost • React • Firebase",
-    thumbnail: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2070&auto=format&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     github: "https://github.com/Mukilan-s18",
   },
   {
     title: "AeroWeather Dashboard",
     tech: "React 18 • Vite • OpenWeather API • GitHub Actions",
-    thumbnail: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2065&auto=format&fit=crop",
     github: "https://github.com/Mukilan-s18",
   },
   {
     title: "MNIST ANN Digit Classifier",
     tech: "TensorFlow • Keras • Gradio • Python",
-    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
     github: "https://github.com/Mukilan-s18",
   },
 ];
@@ -108,6 +108,8 @@ const Spinner = () => (
 );
 
 function ProjectCard({ item }: { item: typeof projects[0] }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <div
       className="group relative rounded-2xl border border-white/15 overflow-hidden bg-white/[0.06] 
@@ -115,14 +117,21 @@ function ProjectCard({ item }: { item: typeof projects[0] }) {
       hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 backdrop-blur-md"
       style={{ backdropFilter: "blur(20px)" }}
     >
-      <div className="relative h-48 overflow-hidden bg-white/5">
-        <img
-          src={item.thumbnail}
-          alt={item.tech}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300" />
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-white/10 to-white/5">
+        {!imgError ? (
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            onError={() => setImgError(true)}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-black/40 text-white/50 text-xs font-mono p-4 text-center">
+            {item.title}
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300 pointer-events-none" />
       </div>
       <div className="p-5 flex flex-col justify-between">
         <h3 className="text-white font-semibold text-sm leading-snug line-clamp-1 mb-2">{item.title}</h3>
