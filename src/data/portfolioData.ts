@@ -182,3 +182,25 @@ export const certificates: Certificate[] = [
     fileUrl: "/assets/Certifications/CertificateOfCompletion_Navigating an EntryLevel Job Search.pdf",
   },
 ];
+
+export interface Honour {
+  title: string;
+  issuer: string;
+  award: string;
+  description: string;
+  thumbnail: string;
+  fileUrl: string;
+  date: string;
+}
+
+export const honours: Honour[] = [
+  {
+    title: "AI/ML using Manufacturing Analytics (MANGO Platform)",
+    issuer: "Walmart Center for Tech Excellence, IIT Madras",
+    award: "Winner Position (1st Place)",
+    description: "Awarded Winner position in the Online Workshop on AI/ML using Manufacturing Analytics Navigating Growth and Opportunities (MANGO) Platform, organized by the Walmart Center for Tech Excellence, IIT Madras.",
+    thumbnail: "/assets/Certifications/20260716_134214.jpg",
+    fileUrl: "/assets/Certifications/20260716_134214.jpg",
+    date: "June 2026",
+  },
+];

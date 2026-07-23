@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { personalInfo, projects, certificates } from "../data/portfolioData";
+import { personalInfo, projects, certificates, honours } from "../data/portfolioData";
 
 export default function About() {
   const navigate = useNavigate();
@@ -47,6 +47,14 @@ export default function About() {
         <h3>${p.title} (${p.tech})</h3>
         <p>${p.description || ''}</p>
         <p><a href="${p.github}" target="_blank" style="color: #66b2ff;">${p.github}</a></p>
+      </div>
+    `).join('');
+
+    const honoursHtml = honours.map(h => `
+      <div class="education-item" style="border-left: 3px solid #ffb703;">
+        <h3>🏆 ${h.title} — <span style="color: #ffb703;">${h.award}</span></h3>
+        <p style="color: #888; font-size: 12px; margin-bottom: 6px;">${h.issuer} | ${h.date}</p>
+        <p>${h.description}</p>
       </div>
     `).join('');
 
@@ -176,6 +184,13 @@ export default function About() {
                     <div class="education-item">
                         <h3>${personalInfo.education.degree}</h3>
                         <p>${personalInfo.education.institution} | ${personalInfo.education.graduation}</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Honours & Awards</h2>
+                    <div class="section-content">
+                        ${honoursHtml}
                     </div>
                 </section>
 
