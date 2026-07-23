@@ -57,6 +57,24 @@ const projects = [
     thumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop",
     github: "https://github.com/Mukilan-s18/PumpDiagnosisChallenge",
   },
+  {
+    title: "Predictive Analytics Engine - FIFA World Cup",
+    tech: "Scikit-Learn • XGBoost • React • Firebase",
+    thumbnail: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/Mukilan-s18",
+  },
+  {
+    title: "AeroWeather Dashboard",
+    tech: "React 18 • Vite • OpenWeather API • GitHub Actions",
+    thumbnail: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/Mukilan-s18",
+  },
+  {
+    title: "MNIST ANN Digit Classifier",
+    tech: "TensorFlow • Keras • Gradio • Python",
+    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/Mukilan-s18",
+  },
 ];
 
 const certificates = [
