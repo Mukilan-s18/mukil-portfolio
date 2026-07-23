@@ -154,17 +154,17 @@ export default function WelcomeScreen() {
             delay: 2,
             duration: 0.5,
           }}
-          className="px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs tracking-[0.25em] text-white/70 shadow-[0_0_30px_rgba(255,255,255,0.04)] overflow-hidden"
+          className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs tracking-[0.25em] text-white/70 shadow-[0_0_30px_rgba(255,255,255,0.04)] overflow-hidden"
         >
           <motion.span
             initial={{ width: "0ch" }}
-            animate={{ width: "22ch" }}
+            animate={{ width: "17.2ch" }}
             transition={{
               delay: 2.2,
               duration: 2,
               ease: "easeInOut",
             }}
-            className="inline-block overflow-hidden whitespace-nowrap"
+            className="inline-block overflow-hidden whitespace-nowrap align-middle"
           >
             www.mukilan.in
           </motion.span>
@@ -174,13 +174,12 @@ export default function WelcomeScreen() {
               opacity: [1, 0, 1],
             }}
             transition={{
-              duration: 0.5,
+              duration: 0.6,
               repeat: Infinity,
+              ease: "easeInOut",
             }}
-            className="ml-[2px]"
-          >
-            |
-          </motion.span>
+            className="inline-block w-[2px] h-[1.1em] bg-white/80 ml-1 rounded-sm align-middle"
+          />
         </motion.div>
 
         {/* Bottom Loading Line */}
